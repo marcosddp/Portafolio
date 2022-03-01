@@ -13,7 +13,12 @@
     <link rel="stylesheet" type="text/css" href="css/proyect.css" />
     <title>Marcos Dominguez</title>
   </head>
-  <body>
+  <body  id="body"  class="body--hidden">
+
+
+    <div id="loadingPage" >
+    <div class="lds-dual-ring"></div>
+  </div>
     <header id="header">
       <div class="header__logo">
         <svg
@@ -321,6 +326,28 @@
       </section>
     </main>
 
+
+    <script>
+      const loadingPage =  document.getElementById("loadingPage");
+      window.onload = function(){
+        setTimeout(function(){
+          loadingPage.style.opacity = "0.45";
+          setTimeout(function(){
+            loadingPage.style.display = "none";
+            document.getElementById("body").classList.toggle("body--hidden");
+          }, 1000);
+        },3000);
+      }
+   </script>
+
+
+
     <script src="scripts/menu.js"></script>
+
+
+
+
+
+
   </body>
 </html>

@@ -1,7 +1,5 @@
 
-window.onload = init;
 
-function init() {
   const closeIcon = document.getElementById("close-icon");
   const menuIcon = document.getElementById("menu-icon");
   const navDropdown =document.querySelector(".nav-dropdown");
@@ -46,4 +44,4 @@ function init() {
     activeMenu(false);
   
   });
-}
+
