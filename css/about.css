@@ -1,0 +1,298 @@
+
+/*ABOUT ABOUT*/
+
+#about {
+    max-width: 900px;
+    margin: 0 auto;
+    /*margin-top:100px;*/
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 185px 0 100px 0px;
+  }
+  /*
+  .title-card {
+    font-family: var(--Inconsolata);
+    font-size: 32px;
+    color: #e5e1ee;
+    font-weight: 700;
+    margin: 10px 0px 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  */
+  .about__content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+    gap: 50px;
+  }
+  /*
+  .title-card::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 1px;
+    background-color: var(--emerald--transparent);
+    margin-left: 20px;
+  }
+  
+  .title-card strong {
+    color: var(--emerald);
+    font-size: 25px;
+    font-weight: 400;
+    margin-right: 8px;
+  }*/
+  
+  #portrait {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 4px;
+    /*overflow: hidden;*/
+    background-image: url("../img/img-glitch/retrato.jpg ");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: glitch--changeimg 5s linear infinite;
+    cursor: pointer;
+    margin-bottom: 25px;
+  }
+  
+  #portrait::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 2px solid var(--green);
+    opacity: 0.65;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  #portrait:hover::after {
+    top: 15px;
+    left: 15px;
+  }
+  
+  #portrait::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /*
+    background-color: rgb(45 216 128 / 15%);*/
+    border-radius: 4px;
+   background-color:rgb(100 255 218 / 15%);
+   mix-blend-mode: screen;
+  }
+  
+  #portrait:hover {
+    animation: inherit;
+  }
+  
+  #portrait:hover::before {
+    background-color: #2dd88000;
+  }
+  
+  @-webkit-keyframes glitch--changeimg {
+    0% {
+      background-image: url("../img/img-glitch/retrato.jpg");
+    }
+    2.5% {
+      background-image: url("../img/img-glitch/00.jpg");
+    }
+    8.3% {
+      background-image: url("../img/img-glitch/01.jpg");
+    }
+    16.6% {
+      background-image: url("../img/img-glitch/02.jpg");
+    }
+    24.9% {
+      background-image: url("../img/img-glitch/03.jpg");
+    }
+    33.2% {
+      background-image: url("../img/img-glitch/04.jpg");
+    }
+    41.5% {
+      background-image: url("../img/img-glitch/09.jpg");
+    }
+    49.8% {
+      background-image: url("../img/img-glitch/05.jpg");
+    }
+    58.1% {
+      background-image: url("../img/img-glitch/07.jpg");
+    }
+    66.4% {
+      background-image: url("../img/img-glitch/08.jpg");
+    }
+    69.8% {
+      background-image: url("../img/img-glitch/02.jpg");
+    }
+    70.8% {
+      background-image: url("../img/img-glitch/04.jpg");
+    }
+    72.8% {
+      background-image: url("../img/img-glitch/05.jpg");
+    }
+    73.8% {
+      background-image: url("../img/img-glitch/retrato.jpg");
+    }
+    74.7% {
+      background-image: url("../img/img-glitch/06.jpg");
+    }
+    83% {
+      background-image: url("../img/img-glitch/10.jpg");
+    }
+    85% {
+      background-image: url("../img/img-glitch/01.jpg");
+    }
+    91.3% {
+      background-image: url("../img/img-glitch/11.jpg");
+    }
+    94% {
+      background-image: url("../img/img-glitch/12.jpg");
+    }
+    95.8% {
+      background-image: url("../img/img-glitch/04.jpg");
+    }
+    97% {
+      background-image: url("../img/img-glitch/11.jpg");
+    }
+  }
+  
+  /**/
+  
+
+  
+  .text--green {
+    color: var(--green);
+  }
+  
+  /*ABOUT ABOUT*/
+
+  @media only screen and (max-width: 984px) {
+
+    #about {
+        padding-left:  50px;
+        padding-right: 50px;
+
+      }
+
+    .about__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 0px;
+        grid-row-gap: 35px;
+       
+      }
+
+      
+  .content__text p {
+ 
+    font-size: 15.73px;
+    line-height: 25.5px;
+  }
+  
+
+    #portrait {
+        margin:0 auto;
+        width:255px;
+        height: 255px;
+      }
+      
+
+  }
+
+  
+  @media only screen and (max-width: 984px) {
+
+    #about {
+        padding-left:  50px;
+        padding-right: 50px;
+
+      }
+
+    .about__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 0px;
+        grid-row-gap: 35px;
+       
+      }
+
+      
+ .content__text p {
+ 
+    font-size: 15.73px;
+    line-height: 25.5px;
+  }
+  
+
+    #portrait {
+        margin:0 auto;
+        width:255px;
+        height: 255px;
+      }
+      
+
+  }
+
+  @media only screen and (max-width: 470px) {
+   
+    
+    #about {
+        padding-left:  35px;
+        padding-right: 35px;
+
+      }
+
+    .about__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 0px;
+        grid-row-gap: 35px;
+       
+      }
+
+      
+.content__text p {
+ 
+    font-size: 15.73px;
+    line-height: 25.5px;
+  }
+
+    #portrait {
+        margin:0 auto;
+        width: 216.75px;
+        height: 216.75px;
+      }
+
+
+
+      
+  #portrait::after {
+  
+    top: 17px;
+    left: 17px;
+   
+  }
+  
+  #portrait:hover::after {
+    top: 12.5px;
+    left: 12.5px;
+  }
+  
+}
+

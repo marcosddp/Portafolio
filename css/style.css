@@ -1,0 +1,194 @@
+/*body*/
+body {
+  background-color: var(--navy);
+
+  background-repeat: repeat;
+}
+
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+ /* box-shadow: inset 0 0 6px red;*/
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  outline: 1px solid var(--green-tint);
+}
+
+/*body*/
+
+/*Fog Fog*/
+.fog {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #00000094;
+  z-index: 999;
+}
+/*Fog Fog*/
+
+/*title-card title-card*/
+
+.title-card {
+  font-family: var(--Inconsolata);
+  font-size:clamp(20.8px,2.22vw, 32px);
+  color: var(--lightest-slate);
+  font-weight: 700;
+  margin: 10px 0px 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+
+.title-card::after {
+  content: "";
+  display: block;
+  position: relative;
+  max-width: 300px;
+  overflow: hidden;
+  width:48.34%;
+  height: 1px;
+  background-color: var(--lightest-navy);
+  margin-left: 20px;
+}
+
+.title-card strong {
+  color: var(--green);
+  font-size: clamp(16.25px,1.73vw, 25px);
+  font-weight: 400;
+  margin-right: 8px;
+}
+
+
+
+/*title-card title-card*/
+
+
+
+/*SKILLS SKILLS*/
+
+#skills {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 75px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 185px 0 100px 0px;
+  overflow: hidden;
+  padding-left: 50px;
+    padding-right: 50px;
+}
+
+.skills__text p {
+  font-weight: 400;
+  margin: 0px 0px 15px;
+  font-size: 16.5px;
+  line-height: 26px;
+}
+
+#skills ul li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+#skills ul li::after {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  color: var(--green);
+  font-size:clamp(15px, 1.73vw, 25px);
+  line-height: 12px;
+}
+/*SKILLS SKILLIS*/
+
+.content__text p {
+  font-weight: 400;
+  margin: 0px 0px 15px;
+  font-size: 18.5px;
+  line-height: 30px;
+}
+
+
+/*CONTACT CONTACT*/
+#contact {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 35px;
+ 
+  padding: 185px 0 100px 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#contact h3 {
+  font-size: clamp( 27.3px,2.91vw, 42px);
+  font-weight: 700;
+  color: var(--lightest-slate);
+  font-family: var(--Inconsolata);
+  margin-bottom: 40px;
+}
+
+#contact p {
+  max-width: 600px;
+}
+
+#contact #email-button {
+  width: 135px;
+  height: 56px;
+  border: 1px solid var(--green);
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+#contact #email-button:hover {
+  filter: brightness(1.25);
+  transform: scale(1.075);
+
+  
+}
+
+.title-contact {
+  font-family: var(--Inconsolata);
+  font-size: clamp( 14.47px,1.54vw, 22.258px);
+  color: var(--green);
+  font-weight: 700;
+  margin: 10px 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+/*CONTACT CONTACT*/
+
+
+
+
+@media only screen and (max-width: 479px){
+  .title-card::after {
+  
+    margin-left: 10px;
+  }
+}
